@@ -17,6 +17,7 @@
     "standard": "^12.0.1"
   },
   "devDependencies": {
+    "cssnano": "^4.1.8",
     "sass": "^1.17.0"
   }
 }
