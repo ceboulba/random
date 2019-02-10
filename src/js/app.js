@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
         theQuote.innerHTML = reponse.data[num].content
         theAuthor.innerHTML = reponse.data[num].title
       })
+      .catch(error => console.log('error =>', error))
   }
 
   getQuote()
@@ -41,5 +42,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
     const citation = document.querySelector('.title p').innerHTML
     console.log('citation => ', citation)
     console.log(e)
+    const btnJS = document
+      .getElementById('tweet-quote')
+      .setAttribute(
+        'href',
+        `https://www.twitter.com/intent/tweet?text=${citation}`
+      )
+    console.log(btnJS)
   }
 })
