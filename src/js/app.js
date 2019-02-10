@@ -38,6 +38,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
   }
 
   btnTweetQuote.onclick = e => {
+    const citation = document.querySelector('.title p').innerHTML
+    console.log('citation => ', citation)
     console.log(e)
   }
 })
