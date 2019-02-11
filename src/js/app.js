@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       .then(function(reponse) {
         console.log(reponse)
         theQuote.innerHTML = reponse.data[num].content
-        theAuthor.innerHTML = reponse.data[num].title
+        theAuthor.innerHTML = `author: ${reponse.data[num].title}`
       })
       .catch(error => console.log('error =>', error))
   }
