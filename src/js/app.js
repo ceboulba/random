@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   const btnNewQuote = document.getElementById('new-quote')
   const btnTweetQuote = document.getElementById('tweet-quote')
   let num = 0
+  const proxy = 'https://cors-anywhere.herokuapp.com/'
 
   //créer un num Random
   function randomNum() {
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     let myRandomNum = randomNum()
     axios
       .get(
-        'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=20'
+        `${proxy}http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=20`
       )
       .then(function(reponse) {
         console.log(reponse)
